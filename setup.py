@@ -13,9 +13,9 @@ setup(
     packages=[
         'hangman',
     ],
-    scripts=[
-        'hangman/bin/hangman',
-    ],
+    entry_points={
+        'console_scripts': ['hangman=hangman:play_hangman'],
+    },
     install_requires=[
     ],
     setup_requires=[

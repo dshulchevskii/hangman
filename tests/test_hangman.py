@@ -8,7 +8,7 @@ def input_capture(word):
 
     def func():
         char = letters.pop()
-        print(char)
+        print(char)           # emulate input log
         return char
     return func
 
