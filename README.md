@@ -9,7 +9,7 @@
 
 Copyright © 2017 Dmitriy Shulchevskiy. See [license] for details.
 
-[license]: LICENSE.md
+[license]: LICENSE
 
 [travis-url]: https://travis-ci.org/dshulchevskii/hangman
 [travis-badge]: https://travis-ci.org/dshulchevskii/hangman.svg?branch=master
