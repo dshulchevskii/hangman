@@ -22,5 +22,6 @@ setup(
         "pytest",
         "pylint",
         "pycodestyle",
+        "pep257",
     ],
 )
