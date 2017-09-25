@@ -1,4 +1,6 @@
+from string import ascii_lowercase
 import hangman.game
+import hangman
 
 
 def input_capture(word):
@@ -106,3 +108,10 @@ def test_lose_run_game(capfd):
     game_session.run()
     out, _ = capfd.readouterr()
     assert out == LOSE_LOG
+
+
+def test_play_random_word_game(capfd):
+    hangman.game.input = input_capture(ascii_lowercase)
+    hangman.play_hangman()
+    out, _ = capfd.readouterr()
+    assert out.split('\n')[-2] in ['You lost!', 'You won!']
