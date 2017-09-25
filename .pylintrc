@@ -1,2 +1,2 @@
 [MESSAGE CONTROL]
-disable=missing-docstring, W97
+disable=missing-docstring,W97
