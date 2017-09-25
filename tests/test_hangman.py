@@ -55,7 +55,7 @@ The word: hello
 You won!
 """
 
-loos_log = """
+lose_log = """
 Guess a letter:
 x
 Missed, mistake 1 out of 5.
@@ -109,4 +109,4 @@ def test_lose_run_game(capfd):
     hangman.game.input = input_capture('xyznmo')
     game_session.run()
     out, err = capfd.readouterr()
-    assert out == loos_log
+    assert out == lose_log
