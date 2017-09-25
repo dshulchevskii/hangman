@@ -7,5 +7,5 @@ __version__ = '0.0.0'
 if __name__ == '__main__':
     words = ['hello', 'world', 'python', 'ruby']
     word = choice(words)
-    play = Hangman(word)
+    play = game.Hangman(word)
     play.run()
