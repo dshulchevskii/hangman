@@ -1,11 +1,11 @@
-from .game import Hangman
 from random import choice
+from .game import Hangman
 
 
-words = ['hello', 'world', 'python', 'ruby']
+PUZZLE_WORDS = ['hello', 'world', 'python', 'ruby']
 
 
 def play_hangman():
-    word = choice(words)
+    word = choice(PUZZLE_WORDS)
     play = Hangman(word)
     play.run()

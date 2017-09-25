@@ -1,7 +1,5 @@
-max_mistakes = 5
-
-
 class Hangman():
+    max_mistakes = 5
 
     def __init__(self, word):
         self.word = word
@@ -21,12 +19,12 @@ class Hangman():
         else:
             self.mistakes += 1
             print('Missed, mistake %d out of %d.' % (self.mistakes,
-                                                     max_mistakes))
+                                                     self.max_mistakes))
         print()
         print("The word: %s" % self.open_word())
 
     def run(self):
-        while self.mistakes < max_mistakes:
+        while self.mistakes < self.max_mistakes:
             self.step()
             if self.open_word() == self.word:
                 print('\nYou won!')

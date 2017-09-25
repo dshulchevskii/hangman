@@ -1,21 +1,17 @@
-import sys
-
-
-sys.path.insert(0, "../")
 import hangman.game
 
 
 def input_capture(word):
     letters = list(reversed(word))
 
-    def func(*args):
+    def func():
         char = letters.pop()
         print(char)
         return char
     return func
 
 
-win_log = """
+WIN_LOG = """
 Guess a letter:
 a
 Missed, mistake 1 out of 5.
@@ -55,7 +51,7 @@ The word: hello
 You won!
 """
 
-lose_log = """
+LOSE_LOG = """
 Guess a letter:
 x
 Missed, mistake 1 out of 5.
@@ -100,13 +96,13 @@ def test_win_run_game(capfd):
     game_session = hangman.game.Hangman('hello')
     hangman.game.input = input_capture('abeolh')
     game_session.run()
-    out, err = capfd.readouterr()
-    assert out == win_log
+    out, _ = capfd.readouterr()
+    assert out == WIN_LOG
 
 
 def test_lose_run_game(capfd):
     game_session = hangman.game.Hangman('wining')
     hangman.game.input = input_capture('xyznmo')
     game_session.run()
-    out, err = capfd.readouterr()
-    assert out == lose_log
+    out, _ = capfd.readouterr()
+    assert out == LOSE_LOG
