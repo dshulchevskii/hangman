@@ -2,10 +2,10 @@ from .game import Hangman
 from random import choice
 
 
-__version__ = '0.0.0'
+words = ['hello', 'world', 'python', 'ruby']
 
-if __name__ == '__main__':
-    words = ['hello', 'world', 'python', 'ruby']
+
+def play_hangman():
     word = choice(words)
-    play = game.Hangman(word)
+    play = Hangman(word)
     play.run()

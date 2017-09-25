@@ -2,7 +2,6 @@ import sys
 
 
 sys.path.insert(0, "../")
-sys.path.insert(0, "../../")
 import hangman.game
 
 
@@ -16,8 +15,8 @@ def input_capture(word):
     return func
 
 
-win_log = \
-"""Guess a letter:
+win_log = """
+Guess a letter:
 a
 Missed, mistake 1 out of 5.
 
@@ -56,8 +55,8 @@ The word: hello
 You won!
 """
 
-loos_log = \
-"""Guess a letter:
+loos_log = """
+Guess a letter:
 x
 Missed, mistake 1 out of 5.
 

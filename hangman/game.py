@@ -12,6 +12,7 @@ class Hangman():
         return ''.join(l if l in self.letters else '*' for l in self.word)
 
     def step(self):
+        print()
         print('Guess a letter:')
         letter = str(input())
         self.letters.append(letter)
@@ -23,12 +24,11 @@ class Hangman():
                                                      max_mistakes))
         print()
         print("The word: %s" % self.open_word())
-        print()
 
     def run(self):
         while self.mistakes < max_mistakes:
             self.step()
             if self.open_word() == self.word:
-                print('You won!')
+                print('\nYou won!')
                 return
-        print('You lost!')
+        print('\nYou lost!')
