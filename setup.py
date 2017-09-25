@@ -18,4 +18,10 @@ setup(
     ],
     install_requires=[
     ],
+    tests_require=[
+        "pytest",
+        "pylint",
+        "pycodestyle",
+        "pep257",
+    ],
 )
